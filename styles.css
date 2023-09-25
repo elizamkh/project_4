@@ -10,10 +10,11 @@
     max-width: 50%;}
 
 #hero {
-    height: 800px;
+    padding-bottom: 5%;
     background: url(hero.jpg);
     background-position: center top;
-    background-size: cover;}
+    background-size: cover;
+width: 100%;}
 
 .in-conteiner {max-width: 1024px;
     width: 100%;
@@ -21,11 +22,17 @@
 
 }
 
-#header {height: 120px;
+.header {height: 120px;
     display: flex;
     align-items: center;
-    justify-content: space-between;}
-    #logo {height: 100px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    } 
+
+
+        
+    
+#logo {height: 100px;
     width: 100px;
     object-fit: contain;}
 
@@ -82,10 +89,16 @@ p {font-family: Nunito Sans;}
     padding: 100px 0 70px;}
 
 .conteiner-for-blocks {display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding-top: 50px;
     padding-bottom: 50px;
     margin: 0 auto;}
+
+    @media (max-width: 415px){
+        .conteiner-for-blocks {flex-direction: column;
+        }
+    }
 
 .advantage {flex-grow: 1;
     border-radius: 10px;
@@ -96,7 +109,8 @@ p {font-family: Nunito Sans;}
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    align-items: center;}
+    align-items: center;
+    }
 
 .icon-adv {width: 30px;
     height: 30px;
@@ -116,12 +130,19 @@ p {font-family: Nunito Sans;}
     line-height: 22px;
     color: #57534E;}
 
-.group-people {display: flex;
+.group-people {
+    margin: 0 auto;
+        display: flex;
+             
     margin-top: 50px;
     max-width: 1024px;
-    width: 100%;
-    margin: 0 auto
-}
+    width: 100%;    
+    }
+
+    @media (max-width: 415px){
+        .group-people {flex-wrap: wrap;
+        }
+    }
 
 .title-group-people {    font-size: 30px;
     font-weight: 700;
@@ -129,12 +150,19 @@ p {font-family: Nunito Sans;}
 font-family: Nunito Sans;
 justify-content: space-between;}
 
+
 .content-group-people {margin-top: 20px;
     line-height: 20px;
     color: #44403C;}
 
 .people-img {    width: 500px;
     margin-left: 20px;}
+
+    @media (max-width: 415px){
+        .people-img {  align-items: center;
+            justify-content: center;
+        }
+    }
 
 .general-conteiner{
     background-color: #FFEDD5;
@@ -145,7 +173,9 @@ justify-content: space-between;}
 .title2 {font-family: Nunito Sans;
     font-size: 36px;
     text-align: center;
-    font-weight: 700;}
+    font-weight: 700;
+    
+    }
 
 .form-text {    color: #57534E;
     font-size: 18px;
